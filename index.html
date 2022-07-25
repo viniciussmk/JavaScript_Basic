@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Hornet vs Xj6</title>
+        <meta charset="utf-8" />
+    </head>
+
+    <body>
+
+        <div id="motos">
+
+        </div> <!--Motos-->
+
+        <div id="votacao">
+
+        </div><!--Votação-->
+
+        <script>
+            
+            const itens = [
+    {
+        id: 0,
+        nome: 'hornet',
+        img: 'hornet.jpg',
+        quantidade: 0
+    },
+
+    {
+        id: 1,
+        nome: 'xj6',
+        img: 'xj6.jpg',
+        quantidade: 0
+    },
+    {
+        id: 2,
+        nome: 'cbr600',
+        img: 'cbr.jpg',
+        quantidade: 0
+    }
+];
+    function alertaVotacao() {
+        alert("Votação concluída !");
+};
+    console.log(itens);
+    inicializarVotacao = () => {
+        var containerMotos = document.getElementById('motos');
+            itens.map((val) => {
+               console.log(val.nome);
+                    containerMotos.innerHTML+= `
+                       <div class="produto-single">
+                           <img src="`+val.img+`" />
+                          <p> `+val.nome+` </p>                        
+                      </div>
+                      <input type="button" onclick="alertaVotacao()" value="Vote aqui" />
+                  `;
+            });
+         };
+inicializarVotacao();
+        </script>
+
+    </body>
+    
+</html>
